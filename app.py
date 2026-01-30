@@ -989,7 +989,7 @@ function tickClockAndCountdown(){
   // 右上角：年月日 + 时分秒（秒级）
   const d = new Date();
   document.getElementById('nowClock').textContent =
-    `${d.getFullYear()}-${pad2(d.getMonth()+1)}-${pad2(d.getDate())} ${pad2(d.getHours())}:${pad2(d.getMinutes())}:${pad2(d.getSeconds())}`;
+    `${pad2(d.getHours())}:${pad2(d.getMinutes())}:${pad2(d.getSeconds())}`;
 
   // next autologin：绝对时间 + 倒计时
   const chip = document.getElementById('nextRunChip');
@@ -1109,3 +1109,4 @@ def unlock_club_manager():
 if __name__ == "__main__":
     port = int(os.getenv("PORT", "10000"))
     app.run(host="0.0.0.0", port=port, debug=False)
+
